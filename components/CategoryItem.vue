@@ -9,6 +9,7 @@ export default {
   props: ['item'],
   methods: {
     onClick() {
+      this.item.checked = !this.item.checked;
       this.$emit("click", this.item);
     }
   }
