@@ -37,8 +37,8 @@ export default {
   data() {
     return {
       list: [
-        {"id": 1, name: 'Soziale Kontakte', checked: true},
-        {"id": 2, name: 'Bewegung', checked: true},
+        {"id": 1, name: 'Soziale Kontakte', checked: false},
+        {"id": 2, name: 'Bewegung', checked: false},
         {"id": 3, name: 'Ernährung', checked: false},
         {"id": 4, name: 'Schlaf', checked: false},
         {"id": 5, name: 'Positiver Fokus', checked: false},
