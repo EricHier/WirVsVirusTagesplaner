@@ -1,7 +1,9 @@
 <template>
   <div>
     <h1>Plan your day</h1>
-    <ListItem v-for="item in list" v-bind:data="item"></ListItem>
+    <ul>
+      <ListItem v-for="item in list" v-bind:data="item"></ListItem>
+    </ul>
   </div>
 </template>
 <script>

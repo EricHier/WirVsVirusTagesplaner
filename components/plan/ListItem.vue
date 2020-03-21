@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <ul>
-      <li>{{data.name}}</li>
-    </ul>
-  </div>
+  <li>{{data.name}}</li>
 </template>
 <script>
 export default {
