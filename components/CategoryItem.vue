@@ -9,7 +9,7 @@ export default {
   props: ['item'],
   methods: {
     onClick() {
-      this.$emit("click");
+      this.$emit("click", this.item);
     }
   }
 }
