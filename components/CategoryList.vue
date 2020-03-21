@@ -1,7 +1,12 @@
 <template>
   <div>
     <ul>
-      <ListItem v-for="item in list" v-bind:data="item"></ListItem>
+      <CategoryItem
+        v-for="item in list"
+        v-bind:name="item.name"
+        v-bind:checked="item.checked"
+      >
+      </CategoryItem>
     </ul>
   </div>
 </template>
