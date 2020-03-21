@@ -1,5 +1,5 @@
 <template>
-  <button v-on:click="sendclick" class="custombutton">
+  <button v-on:click="sendclick" class="custombutton outline-none">
     <slot/>
   </button>
 </template>

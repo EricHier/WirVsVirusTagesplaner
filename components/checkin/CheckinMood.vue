@@ -3,15 +3,14 @@
     <h1 class="w-full my-8 title">Wie geht's dir? </h1>
 
     <input type="range" min="0" max="4" value="2" class="w-full slider mb-8" v-model="inputValue" id="myRange">
-
-    <ButtonDesign v-on:click="sendResult">Weiter</ButtonDesign>
   </div>
 </template>
 <script>
   import ButtonDesign from '~/components/SlectionButton.vue';
+  import WeiterButton from "../WeiterButton";
 
   export default {
-    components: {ButtonDesign},
+    components: {WeiterButton, ButtonDesign},
     data() {
       return {
         inputValue: "2"
@@ -20,6 +19,9 @@
     methods: {
       sendResult() {
         this.$emit("submit", parseInt(this.inputValue));
+      },
+      click() {
+        this.sendResult();
       }
     }
   }
