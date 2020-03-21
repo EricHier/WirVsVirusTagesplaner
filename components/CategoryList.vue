@@ -3,8 +3,8 @@
     <ul>
       <CategoryItem
         v-for="item in list"
-        v-bind:name="item.name"
-        v-bind:checked="item.checked"
+        v-bind:item="item"
+        v-bind:key="item.name"
       >
       </CategoryItem>
     </ul>

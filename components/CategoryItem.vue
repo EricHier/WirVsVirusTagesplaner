@@ -1,8 +1,8 @@
 <template>
-  <li>{{name}}</li>
+  <li>{{item.name}}</li>
 </template>
 <script>
 export default {
-  props: ['name', 'checked'],
+  props: ['item']
 }
 </script>
