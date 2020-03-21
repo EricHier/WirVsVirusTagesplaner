@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+
+* {
+  font-family: 'Noto Serif', serif;
+}
+
+.title {
+  font-size: 2.25rem;
+}

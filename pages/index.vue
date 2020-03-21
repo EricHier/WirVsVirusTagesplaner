@@ -47,6 +47,7 @@ export default {
         this.$route.push("/planner");
       }
     }
+    // 375 - 812
   },
   created() {
     let self = this;
