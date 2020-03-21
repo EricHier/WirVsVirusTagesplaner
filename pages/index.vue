@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-4">
+  <div class="container p-4 background">
     <Splashscreen v-if="screenIndex === 0"></Splashscreen>
 
     <CheckinMood v-if="screenIndex === 1" v-on:submit="submitCheckinMood"></CheckinMood>
