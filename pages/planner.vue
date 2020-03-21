@@ -13,3 +13,5 @@ export default {
   }
 }
 </script>
+
+<!--TODO Nicht mehr als vier Sachen auswählen-->
