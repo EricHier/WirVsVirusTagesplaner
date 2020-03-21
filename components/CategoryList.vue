@@ -4,8 +4,7 @@
       <CategoryItem
         v-for="item in list"
         v-bind:item="item"
-        v-bind:key="item.name"
-      >
+        v-bind:key="item.name">
       </CategoryItem>
     </ul>
   </div>

@@ -1,34 +1,30 @@
 <template>
-  <div class="p-4 container">
-    <h1 class="w-full text-bold text-left	my-8 text-4xl">Wie geht's dir? </h1>
+  <div class="w-full">
+    <h1 class="w-full my-8 title">Wie geht's dir? </h1>
 
-    <input type="range" min="0" max="5" value="2" class="w-full slider mb-8" id="myRange">
+    <input type="range" min="0" max="4" value="2" class="w-full slider mb-8" v-model="inputValue" id="myRange">
 
+    <ButtonDesign v-on:click="sendResult">Weiter</ButtonDesign>
   </div>
 </template>
 <script>
+  import ButtonDesign from '~/components/ButtonDesign.vue';
+
   export default {
+    components: {ButtonDesign},
+    data() {
+      return {
+        inputValue: "2"
+      }
+    },
     methods: {
-      sendResult(props) {
-        this.$emit("submit", props);
-      },
-      sendResult0(props) {
-        this.sendResult(0);
-      },
-      sendResult1(props) {
-        this.sendResult(1);
+      sendResult() {
+        this.$emit("submit", parseInt(this.inputValue));
       }
     }
   }
 </script>
 <style>
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
   .slider {
     appearance: none;
     outline: none;
