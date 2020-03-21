@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Plan your day</h1>
+    <h1>Was hast du morgen vor?</h1>
     <ul>
       <ListItem v-for="item in list" v-bind:data="item"></ListItem>
     </ul>
@@ -16,8 +16,14 @@ export default {
   data() {
     return {
       list: [
-        {name: 'Arbeiten', check: false},
-        {name: 'Sport', check: true}
+        { name: 'Soziale Kontakte', checked: false },
+        { name: 'Bewegung', checked: false },
+        { name: 'Ernährung', checked: false },
+        { name: 'Schlaf', checked: false },
+        { name: 'Positiver Fokus', checked: false },
+        { name: 'Kreatives', checked: false },
+        { name: 'Entspannung', checked: false },
+        { name: 'Produktiv sein', checked: false },
       ],
     }
   }
