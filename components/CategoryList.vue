@@ -4,7 +4,8 @@
       <CategoryItem
         v-for="item in list"
         v-bind:item="item"
-        v-bind:key="item.id">
+        v-bind:key="item.id"
+        v-on:click="onClick">
       </CategoryItem>
     </ul>
     <button v-on:click="submitCategoryList">Los</button>
@@ -39,6 +40,11 @@ export default {
         {"id": 7, name: 'Entspannung', checked: false},
         {"id": 8, name: 'Produktiv sein', checked: false},
       ],
+    }
+  },
+  methods: {
+    onClick(e) {
+      this.$emit("click", e);
     }
   }
 }

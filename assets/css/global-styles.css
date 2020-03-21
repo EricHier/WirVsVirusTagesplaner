@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+
+* {
+  font-family: 'Noto Serif', serif;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.large {
+  font-size: 16px;
+}
+
+.medium {
+  font-size: 15px;
+}
+
+.small {
+  font-size: 14px;
+}
+
+.backround {
+  background-image:
+    linear-gradient(
+      to bottom, 
+      #f9fefee9, #caf5f5e9
+    );
+}

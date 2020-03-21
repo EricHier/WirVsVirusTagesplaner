@@ -1,15 +1,15 @@
 <template>
-  <ButtonDesign class="my-1" v-on:click="onClick">{{item.name}}</ButtonDesign>
+  <SelectionButton class="my-1" v-on:click="onClick">{{item.name}}</SelectionButton>
 </template>
 <script>
-import ButtonDesign from "./ButtonDesign";
+import SelectionButton from "./SlectionButton";
 
 export default {
-  components: {ButtonDesign},
+  components: {SelectionButton},
   props: ['item'],
   methods: {
     onClick() {
-      this.$emit("click");
+      this.$emit("click", this.item);
     }
   }
 }

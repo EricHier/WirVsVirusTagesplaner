@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-  import ButtonDesign from '~/components/ButtonDesign.vue';
+  import ButtonDesign from '~/components/SlectionButton.vue';
 
   export default {
     components: {ButtonDesign},
