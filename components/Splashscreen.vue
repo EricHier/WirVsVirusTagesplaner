@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container backround">
     <h1 class="text-5xl font-bold">Plan your day @ home</h1>
   </div>
 </template>

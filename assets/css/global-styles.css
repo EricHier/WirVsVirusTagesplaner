@@ -7,3 +7,11 @@
 .title {
   font-size: 2.25rem;
 }
+
+.backround {
+  background-image:
+    linear-gradient(
+      to bottom, 
+      #f9fefee9, #caf5f5e9
+    );
+}
