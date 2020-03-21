@@ -1,11 +1,12 @@
 <template>
-  <div class="container p-4">
+  <div class="container p-8 background">
     <Splashscreen v-if="screenIndex === 0"></Splashscreen>
 
-    <CheckinMood v-if="screenIndex === 1" v-on:submit="submitCheckinMood"></CheckinMood>
+    <CheckinMood ref="checkinmood" v-if="screenIndex === 1" v-on:submit="submitCheckinMood"></CheckinMood>
     <CheckinPositive v-if="screenIndex === 2" v-on:submit="submitCheckinPositive"></CheckinPositive>
     <CheckinNegative v-if="screenIndex === 3" v-on:submit="submitCheckinNegative"></CheckinNegative>
 
+    <WeiterButton v-if="screenIndex === 1" class="absolute bottom-0 right-0 m-8" v-on:click="onClick"></WeiterButton>
   </div>
 </template>
 
@@ -14,9 +15,11 @@ import Splashscreen from '~/components/Splashscreen.vue'
 import CheckinMood from '~/components/checkin/CheckinMood.vue'
 import CheckinPositive from '~/components/checkin/CheckinPositive.vue'
 import CheckinNegative from '~/components/checkin/CheckinNegative.vue'
+import WeiterButton from "../components/WeiterButton";
 
 export default {
   components: {
+    WeiterButton,
     Splashscreen, CheckinMood, CheckinPositive, CheckinNegative
   },
   data() {
@@ -39,6 +42,9 @@ export default {
     submitCheckinNegative(props) {
       this.checkinNegative = props;
       this.screenIndex++;
+    },
+    onClick() {
+      this.$refs.checkinmood.click();
     }
   },
   watch: {

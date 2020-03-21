@@ -21,10 +21,10 @@
   font-size: 14px;
 }
 
-.backround {
+.background {
   background-image:
     linear-gradient(
-      to bottom, 
+      to bottom,
       #f9fefee9, #caf5f5e9
     );
 }
