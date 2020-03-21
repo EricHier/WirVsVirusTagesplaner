@@ -4,8 +4,7 @@
       <CategoryItem
         v-for="item in list"
         v-bind:item="item"
-        v-bind:key="item.id"
-      >
+        v-bind:key="item.id">
       </CategoryItem>
     </ul>
     <button v-on:click="submitCategoryList">Los</button>

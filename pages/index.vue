@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container p-4">
     <Splashscreen v-if="screenIndex === 0"></Splashscreen>
 
     <CheckinMood v-if="screenIndex === 1" v-on:submit="submitCheckinMood"></CheckinMood>
@@ -47,6 +47,7 @@ export default {
         this.$route.push("/planner");
       }
     }
+    // 375 - 812
   },
   created() {
     let self = this;
@@ -57,3 +58,11 @@ export default {
   }
 }
 </script>
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
