@@ -1,7 +1,11 @@
 <template>
   <div>
     <h1 class="title my-8">Was lief gut?  </h1>
-    <CategoryList v-on:click="test"></CategoryList>
+    <CategoryList
+      v-bind:is-emit-click=true
+      v-on:click="test"
+    >
+    </CategoryList>
   </div>
 </template>
 <script>

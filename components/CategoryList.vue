@@ -8,13 +8,16 @@
         v-on:click="onClick">
       </CategoryItem>
     </ul>
-    <button v-on:click="submitCategoryList">Los</button>
+    <button v-if="!isEmitClick" v-on:click="submitCategoryList">Los</button>
   </div>
 </template>
 <script>
 import CategoryItem from '~/components/CategoryItem.vue';
 
 export default {
+  props: {
+    isEmitClick: Boolean
+  },
   components: {
     CategoryItem
   },
