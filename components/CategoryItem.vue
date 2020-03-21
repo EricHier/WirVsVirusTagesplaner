@@ -2,7 +2,7 @@
   <SelectionButton class="my-1" v-on:click="onClick">{{item.name}}</SelectionButton>
 </template>
 <script>
-import SelectionButton from "./SlectionButton";
+import SelectionButton from "./SelectionButton";
 
 export default {
   components: {SelectionButton},
