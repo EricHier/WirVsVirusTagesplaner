@@ -6,11 +6,11 @@
   </div>
 </template>
 <script>
-import ListItem from '~/components/plan/ListItem.vue';
+import CategoryItem from '~/components/CategoryItem.vue';
 
 export default {
   components: {
-    ListItem
+    CategoryItem
   },
   data() {
     return {
