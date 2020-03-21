@@ -4,4 +4,14 @@
   </div>
 </template>
 <script>
+export default {
+  data() {
+    return {
+      categoryIds: []
+    }
+  },
+  created() {
+    console.log(this.$route.query.categoryIds);
+  }
+}
 </script>
