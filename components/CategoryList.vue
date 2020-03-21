@@ -29,6 +29,9 @@ export default {
         name: 'plan',
         query: { categoryIds: filtered.map(x => x.id) }
       });
+    },
+    onClick(e) {
+      this.$emit("click", e);
     }
   },
   data() {
@@ -43,11 +46,6 @@ export default {
         {"id": 7, name: 'Entspannung', checked: false},
         {"id": 8, name: 'Produktiv sein', checked: false},
       ],
-    }
-  },
-  methods: {
-    onClick(e) {
-      this.$emit("click", e);
     }
   }
 }
