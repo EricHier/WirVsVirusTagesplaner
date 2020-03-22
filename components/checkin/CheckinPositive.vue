@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div style="background-image: url('/Weisse_Flaeche.svg')" class="w-screen h-screen mt-20">
+
     <h1 class="title my-8">Was lief gut?  </h1>
     <CategoryList
     v-on:click="onClick"
@@ -15,11 +16,7 @@
     props: ["data"],
     methods: {
       onClick(e) {
-        console.log(e);
-        this.$emit("show");
-      },
-      sendResult() {
-        this.$emit("submit", this.$refs.categorylist.getData());
+        this.$emit("data", this.$refs.categorylist.getData());
       }
     },
     mounted() {

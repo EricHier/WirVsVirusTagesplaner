@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div style="background-image: url('/Weisse_Flaeche.svg')" class="w-screen h-screen mt-20">
     <h1 class="title my-8">Was lief nicht gut?  </h1>
     <CategoryList
       v-on:click="onClick"
-      ref="categorylistnegative">
+      ref="categorylist">
     </CategoryList>
   </div>
 </template>
@@ -12,11 +12,14 @@
 
   export default {
     components: {CategoryList},
+    props: ["data"],
     methods: {
       onClick(e) {
-        console.log(e);
-        this.$emit("show");
+        this.$emit("data", this.$refs.categorylist.getData());
       }
+    },
+    mounted() {
+      this.$refs.categorylist.setSelected(this.data);
     }
   }
 </script>

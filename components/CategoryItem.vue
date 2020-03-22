@@ -1,5 +1,5 @@
 <template>
-  <SelectionButton class="my-1" v-on:click="onClick" v-bind:selected="item.checked">{{item.name}}</SelectionButton>
+  <SelectionButton class="my-2" v-on:click="onClick" v-bind:selected="item.checked">{{item.name}}</SelectionButton>
 </template>
 <script>
 import SelectionButton from "./SelectionButton";

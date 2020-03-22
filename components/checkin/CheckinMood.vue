@@ -12,12 +12,9 @@
   export default {
     components: {WeiterButton, ButtonDesign},
     props: ["inputValue"],
-    methods: {
-      sendResult() {
-        this.$emit("submit", parseInt(this.inputValue));
-      },
-      click() {
-        this.sendResult();
+    watch: {
+      inputValue: function (val) {
+        this.$emit("data", val);
       }
     }
   }
@@ -36,7 +33,7 @@
     appearance: none;
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
-    background: #4CAF50; /* Green background */
+    background-image: url("/mood-icons/Mood_Happy.svg");
     cursor: pointer; /* Cursor on hover */
     border-radius: 50px;
   }
