@@ -1,7 +1,9 @@
 <template>
   <div>
     <h1 class="title my-8">Was lief nicht gut?  </h1>
-    <CategoryList>
+    <CategoryList
+      v-on:click="onClick"
+      ref="categorylistnegative">
     </CategoryList>
   </div>
 </template>
@@ -12,7 +14,8 @@
     components: {CategoryList},
     methods: {
       onClick(e) {
-        this.$emit("submit", e.id);
+        console.log(e);
+        this.$emit("show");
       }
     }
   }

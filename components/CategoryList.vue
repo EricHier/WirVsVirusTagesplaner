@@ -18,6 +18,12 @@ export default {
     CategoryItem
   },
   methods: {
+    setSelected(arr) {
+      arr.forEach((obj) => {
+        this.listItems[obj].checked = true;
+        this.onClick(this.listItems[obj]);
+      });
+    },
     submitCategoryList(clickEvent) {
       const filtered = this.listItems.filter(function(x) { return x.checked; });
 
@@ -27,7 +33,7 @@ export default {
       });
     },
     getData() {
-      return this.listItems;
+      return this.listItems.filter((value) => value.checked).map((item) => item.id);
     },
     onClick(e) {
       let selectedItems =  this.listItems.filter((value) => value.checked);
@@ -36,13 +42,12 @@ export default {
         e.checked = false;
 
       e.selectedItems = selectedItems;
-
       this.$emit("click", e);
     }
   },
   data() {
     return {
-      list: categories
+      listItems:  JSON.parse(JSON.stringify(categories))
     }
   }
 }

@@ -2,9 +2,9 @@
   <div class="container p-8 background" v-bind:style="{'background-image' : 'url(' + background + ')'}">
     <Splashscreen v-if="screenIndex === 0"></Splashscreen>
 
-    <CheckinMood ref="checkinmood" v-if="screenIndex === 1" v-on:submit="submitCheckinMood"></CheckinMood>
-    <CheckinPositive ref="checkinpositive" v-if="screenIndex === 2" v-on:submit="submitCheckinPositive" v-on:show="weiterButton"></CheckinPositive>
-    <CheckinNegative ref="checkinnegative" v-if="screenIndex === 3" v-on:submit="submitCheckinNegative"></CheckinNegative>
+    <CheckinMood ref="checkinmood" v-if="screenIndex === 1" v-on:submit="submitCheckinMood" v-bind:inputValue="checkinMood"> </CheckinMood>
+    <CheckinPositive ref="checkinpositive" v-if="screenIndex === 2" v-on:submit="submitCheckinPositive" v-on:show="weiterButton = true" v-bind:data="checkinPositive"></CheckinPositive>
+    <CheckinNegative v-if="screenIndex === 3" v-on:submit="submitCheckinNegative"  v-on:show="weiterButton = true"></CheckinNegative>
 
     <WeiterButton v-if="screenIndex >= 1" v-bind:back="screenIndex >=2" v-on:back="screenIndex--" v-bind:weiter="weiterButton || screenIndex == 1" class="absolute bottom-0 right-0 my-8" v-on:click="onClick"></WeiterButton>
   </div>
@@ -19,17 +19,16 @@ import WeiterButton from "../components/WeiterButton";
 
 export default {
   components: {
-    WeiterButton,
-    Splashscreen, CheckinMood, CheckinPositive, CheckinNegative
+    WeiterButton, Splashscreen, CheckinMood, CheckinPositive, CheckinNegative
   },
   data() {
     return {
       screenIndex: 0,
       weiterButton: false,
-      checkinMood: {},
-      checkinPositive: {},
-      checkinNegative: {},
-      background: "/bg_startscreen.jpg"
+      checkinMood: 2,
+      checkinPositive: [],
+      checkinNegative: [],
+      background: "/bg_slider.jpg"
     }
   },
   methods: {
@@ -60,6 +59,7 @@ export default {
       } else {
         this.background = "/bg_slider.jpg";
       }
+
       if (newVal >= 4) {
         this.$router.push({
           name: 'planner',
@@ -74,7 +74,7 @@ export default {
 
     setTimeout(() => {
       self.screenIndex = 1
-    }, 3000);
+    }, 100);
   }
 }
 </script>

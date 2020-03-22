@@ -12,13 +12,18 @@
 
   export default {
     components: {CategoryList},
+    props: ["data"],
     methods: {
       onClick(e) {
+        console.log(e);
         this.$emit("show");
       },
       sendResult() {
         this.$emit("submit", this.$refs.categorylist.getData());
       }
+    },
+    mounted() {
+      this.$refs.categorylist.setSelected(this.data);
     }
   }
 </script>

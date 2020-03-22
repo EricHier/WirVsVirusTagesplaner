@@ -11,11 +11,7 @@
 
   export default {
     components: {WeiterButton, ButtonDesign},
-    data() {
-      return {
-        inputValue: "2"
-      }
-    },
+    props: ["inputValue"],
     methods: {
       sendResult() {
         this.$emit("submit", parseInt(this.inputValue));
