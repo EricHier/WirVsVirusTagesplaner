@@ -21,8 +21,8 @@ export default {
   components: {SelectionButton},
   props: ['item'],
   methods: {
-    onClick(e) {
-      console.log('Click', e);
+    onClick() {
+      this.$emit("click", this.item);
     }
   }
 }
