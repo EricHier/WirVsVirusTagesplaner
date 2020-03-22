@@ -1,6 +1,7 @@
 <template>
   <div class="container absolute top-0">
-    <h1 class="text-5xl font-bold">Plan your day @ home</h1>
+    <div class="title">Hallo.</div>
+    <p>Schön, dass du da bist!</p>
   </div>
 </template>
 <style>
