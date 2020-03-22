@@ -95,5 +95,19 @@ export const category_details = [
         "link": "https://www.youtube.com/watch?v=hvLxjXURkM4"
       }
     ]
+  },
+  {
+    "name": "Schlaf",
+    "category_id": 3,
+    "activities": [
+      {
+        "name": "Schlaftagebuch",
+        "link": "https://sleepbetter.org/"
+      },
+      {
+        "name": "Schlafhygiene",
+        "link": "https://www.dgsm.de/downloads/dgsm/arbeitsgruppen/ratgeber/neu-Nov2011/Schlafstoerung_A4.pdf"
+      }
+    ]
   }
 ];
