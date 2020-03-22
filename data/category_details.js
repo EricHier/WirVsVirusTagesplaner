@@ -190,5 +190,49 @@ export const category_details = [
         "name": "Rätsel lösen"
       }
     ]
-  }
+  },
+  {
+    "name": "Entspannung",
+    "category_id": 6,
+    "activities": [
+      {
+        "name": "Podcast hören",
+        "link": "https://lauraseiler.com/podcast/",
+        //       Podcasts (Happy, holy & confident/ Verstehen, fühlen, glücklich sein/ 7mind/ Meditation für jeden Tag/ Christian Bischoff)
+      },
+      {
+        "name": "Meditation",
+        "link": "https://headspace.com/",
+        //       Meditation (APPs: Balloon- App (nur teilweise)/ Headspace-App/ 7mind-App/ Insight Timer)
+      },
+      {
+        "name": "Bodyscan",
+        "link": "https://www.youtube.com/watch?v=TWg6yiP_Jbs",
+      },
+      {
+        "name": "Progressive Muskelrelaxation",
+        "link": "https://www.youtube.com/watch?v=JlbQUjJzO6o",
+      },
+      {
+        "name": "Atmen",
+        "link": "https://eddiestern.com/the-breathing-app/",
+        // Atmen (APP: Breathing-App [kostenfrei|, Prana Breath)
+      }, {
+        "name": "AOK-Relax-App",
+        "link": "https://www.aok.de/pk/bayern/inhalt/aok-app-relax-1/",
+      },
+      {"name": "Lesen",},
+      {"name": "Vorlesen",},
+      {"name": "Fernsehen",},
+      {"name": "Hörbücher",},
+      {"name": "Serien schauen",},
+      {"name": "Filme schauen",},
+      {"name": "Wellness daheim",},
+      {"name": "Wellness daheim",},
+      {"name": "in die Badewanne legen",},
+      {"name": "heiß duschen",},
+      {"name": "Kerzen anmachen",},
+      {"name": "Geschichte anhören",},
+    ]
+  },
 ];
