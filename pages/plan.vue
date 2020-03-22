@@ -18,7 +18,7 @@ export default {
   methods: {
     onClick(category) {
       this.$router.push({
-        name: 'plan_item',
+        name: 'category_details',
         query: { categoryId: category.id }
       });
     }
