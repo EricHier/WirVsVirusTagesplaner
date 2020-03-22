@@ -17,10 +17,14 @@ import { categories } from '~/data/categories';
 export default {
   components: {CategoryTimeSlot},
   methods: {
-    onClick(category) {
+    onClick(event) {
       this.$router.push({
         name: 'category_details',
-        query: { categoryId: category.id }
+        query: {
+          categoryId: event?.category?.id,
+          title: event.genitiv,
+          question: `Was hast du am ${event.name} vor?`
+        }
       });
     }
   },
@@ -33,9 +37,9 @@ export default {
     const categoryIds = this.$route.query?.categoryIds || [];
     const selectedCategories = categoryIds.map(id => categories[id]);
     const defaultTimeSlots = [
-      {id: 0, name: 'Morgens', category: selectedCategories[0]},
-      {id: 1, name: 'Mittags', category: selectedCategories[1]},
-      {id: 2, name: 'Abends', category: selectedCategories[2]}
+      {id: 0, name: 'Morgen', genitiv: 'Morgens', category: selectedCategories[0]},
+      {id: 1, name: 'Mittag', genitiv: 'Mittags', category: selectedCategories[1]},
+      {id: 2, name: 'Abend', genitiv: 'Abends', category: selectedCategories[2]}
     ];
     this.timeSlots = defaultTimeSlots;
   }
