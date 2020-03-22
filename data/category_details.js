@@ -1,7 +1,7 @@
 export const category_details = [
   {
     "name": "Kontakt zu Anderen",
-    "category_id": 0,
+    "category_id": 6,
     "activities": [
       {
         "name": "Einen Freund Anrufen",
@@ -27,7 +27,7 @@ export const category_details = [
   },
   {
     "name": "Bewegung",
-    "category_id": 1,
+    "category_id": 2,
     "activities": [
       {
         "name": "Yoga",
@@ -73,7 +73,7 @@ export const category_details = [
   },
   {
     "name": "Essen und Trinken",
-    "category_id": 2,
+    "category_id": 3,
     "activities": [
       {
         "name": "KptnCook",
@@ -98,7 +98,7 @@ export const category_details = [
   },
   {
     "name": "Schlaf",
-    "category_id": 3,
+    "category_id": 7,
     "activities": [
       {
         "name": "Schlaftagebuch",
@@ -112,7 +112,7 @@ export const category_details = [
   },
   {
     "name": "Positiver Fokus",
-    "category_id": 4,
+    "category_id": 1,
     "activities": [
       {
         "name": "News",
@@ -140,7 +140,7 @@ export const category_details = [
   },
   {
     "name": "Kreatives",
-    "category_id": 5,
+    "category_id": 4,
     "activities": [
       {
         "name": "News",
@@ -193,7 +193,7 @@ export const category_details = [
   },
   {
     "name": "Entspannung",
-    "category_id": 6,
+    "category_id": 5,
     "activities": [
       {
         "name": "Podcast hören",
@@ -236,7 +236,7 @@ export const category_details = [
   },
   {
     "name": "Produktiv sein",
-    "category_id": 7,
+    "category_id": 0,
     "activities": [
       {
         "name": "Arbeiten",
