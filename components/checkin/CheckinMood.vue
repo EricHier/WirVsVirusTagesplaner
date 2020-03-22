@@ -21,6 +21,7 @@
 </script>
 <style>
   .slider {
+    -webkit-appearance: none;
     appearance: none;
     outline: none;
     height: 5px;
@@ -33,7 +34,7 @@
     appearance: none;
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
-    background-image: url("/mood-icons/Mood_Happy.svg");
+    background-image: url("/mood_happy.png");
     cursor: pointer; /* Cursor on hover */
     border-radius: 50px;
   }
