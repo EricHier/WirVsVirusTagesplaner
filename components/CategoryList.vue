@@ -10,6 +10,8 @@
 </template>
 <script>
 import CategoryItem from '~/components/CategoryItem.vue';
+import WeiterButton from "~/components/WeiterButton.vue";
+import { categories } from '~/data/categories';
 
 export default {
   components: {
@@ -40,16 +42,7 @@ export default {
   },
   data() {
     return {
-      listItems: [
-        {"id": 1, name: 'Soziale Kontakte', checked: false},
-        {"id": 2, name: 'Bewegung', checked: false},
-        {"id": 3, name: 'Ernährung', checked: false},
-        {"id": 4, name: 'Schlaf', checked: false},
-        {"id": 5, name: 'Positiver Fokus', checked: false},
-        {"id": 6, name: 'Kreatives', checked: false},
-        {"id": 7, name: 'Entspannung', checked: false},
-        {"id": 8, name: 'Produktiv sein', checked: false},
-      ]
+      list: categories
     }
   }
 }
