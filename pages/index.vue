@@ -6,7 +6,7 @@
     <CheckinPositive v-if="screenIndex === 2" v-on:data="newPositiveData" v-bind:data="checkinPositive" v-on:show="weiterButton = true"></CheckinPositive>
     <CheckinNegative v-if="screenIndex === 3" v-on:data="newNegativeData" v-bind:data="checkinNegative" v-on:show="weiterButton = true"></CheckinNegative>
 
-    <WeiterButton v-if="screenIndex >= 1" v-bind:back="screenIndex >=2" v-on:back="screenIndex--" v-bind:seethrough="screenIndex >= 2" v-bind:weiter="weiterButton || screenIndex == 1" v-on:click="onClick"></WeiterButton>
+    <WeiterButton v-if="screenIndex >= 1" v-bind:disabled="!weiterButton" v-bind:back="screenIndex >=2" v-on:back="screenIndex--" v-bind:seethrough="screenIndex >= 2" v-on:click="onClick"></WeiterButton>
   </div>
 </template>
 
@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       screenIndex: 0,
-      weiterButton: false,
+      weiterButton: true,
       checkinMood: 2,
       checkinPositive: [],
       checkinNegative: [],
@@ -34,6 +34,7 @@ export default {
   methods: {
     onClick()  {
       this.screenIndex++;
+      this.weiterButton = false;
     },
     newMoodData(data) {
       this.checkinMood = data;

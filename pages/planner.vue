@@ -10,7 +10,7 @@
       </CategoryList>
     </div>
 
-    <WeiterButton v-bind:back="false" v-bind:seethrough="true" v-bind:weiter="weiterButton" v-on:click="onClick">
+    <WeiterButton v-bind:back="false" v-bind:seethrough="true" v-bind:disabled="!weiterButton" v-on:click="onClick">
     </WeiterButton>
   </div>
 </template>

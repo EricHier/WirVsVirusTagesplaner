@@ -16,18 +16,23 @@
           v-on:click="onClick">
         </CategoryActivity>
       </div>
+      <WeiterButton v-bind:weiter="false" v-bind:disabled="false" v-on:back="back" v-bind:back="true"></WeiterButton>
     </div>
   </div>
 </template>
 <script>
 import CategoryActivity from '~/components/CategoryActivity.vue';
 import { category_details } from '~/data/category_details';
+import WeiterButton from "../components/WeiterButton";
 
 export default {
-  components: {CategoryActivity},
+  components: {WeiterButton, CategoryActivity, WeiterButton},
   methods: {
     onClick(activity) {
       console.log('activity', activity);
+    },
+    back() {
+      window.history.back();
     }
   },
   data() {
