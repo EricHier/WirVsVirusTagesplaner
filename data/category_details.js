@@ -109,5 +109,86 @@ export const category_details = [
         "link": "https://www.dgsm.de/downloads/dgsm/arbeitsgruppen/ratgeber/neu-Nov2011/Schlafstoerung_A4.pdf"
       }
     ]
+  },
+  {
+    "name": "Positiver Fokus",
+    "category_id": 4,
+    "activities": [
+      {
+        "name": "News",
+        "link": "https://www.effekt-voll.com/",
+        // "link": "goodnews.eu"
+      },
+      {
+        "name": "Affirmationen",
+        "link": "https://myaffirmations.org/"
+      },
+      {
+        "name": "Lieblings-Playlist erstellen",
+        "link": "https://www.spotify.com/"
+      },
+      {
+        "name": "Spiele spielen",
+      },
+      {
+        "name": "Puzzle",
+      },
+      {
+        "name": "Singen",
+      }
+    ]
+  },
+  {
+    "name": "Kreatives",
+    "category_id": 5,
+    "activities": [
+      {
+        "name": "News",
+        "link": "https://www.effekt-voll.com/",
+      },
+
+      {
+        "name": "Häkeln für Anfänger", "link": "https://www.youtube.com/watch?v=96fEPEkK0sQ"
+      },
+      {
+        "name": "Stricken lernen", "link": "https://www.youtube.com/watch?v=ztKf_gQ0y5s"
+      },
+      {
+        "name": "Nähen für Anfänger", "link": "https://www.youtube.com/watch?v=DRBvepXATxw"
+      },
+      {
+        "name": "Jonglieren lernen", "link": "https://www.youtube.com/watch?v=03VNHsU2jZE"
+      },
+      {
+        "name": "Mandala malen", "link": "https://www.mandala-bilder.de/erwachsene-mandalas.html"
+      },
+      {
+        "name": "Comics zeichnen", "link": "https://www.youtube.com/watch?v=F-kH39nGwCc"
+      },
+      {
+        "name": "Spielideen für Kinder", "link": "https://www.youtube.com/watch?v=lUYI3of04qo"
+      },
+      {
+        "name": "Basteln", "link": "https://www.youtube.com/watch?v=ed4RJ-z9lDE"
+      },
+      {
+        "name": "Buchclub gründen (z.B. via Skype)"
+      },
+      {
+        "name": "Musizieren (evtl. auch mit Nachbarn gemeinsam, von Fenster zu Fenster/ Balkon zu Balkon)"
+      },
+      {
+        "name": "Karaoke", "link": "https://www.smule.com/"
+      },
+      {
+        "name": "Zeichnen"
+      },
+      {
+        "name": "Malen"
+      },
+      {
+        "name": "Rätsel lösen"
+      }
+    ]
   }
 ];
