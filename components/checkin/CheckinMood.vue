@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <h1 class="w-full my-8 title">Wie geht's dir? </h1>
+    <h1 class="w-full my-8 title">Wie ist deine Stimmung heute? </h1>
 
     <input type="range" min="0" max="4" value="2" class="w-full slider mb-8" v-model="inputValue" id="myRange">
   </div>
