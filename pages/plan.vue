@@ -1,37 +1,44 @@
 <template>
   <div class="container p-8 background">
     <h1 class="title my-8">Dein Plan für heute</h1>
-    <div>
-      <h2>Morgens</h2>
-      <p v-if="categoryIds[0]">{{categoryIds[0]}}</p>
-      <p v-else>Nichts</p>
-    </div>
-    <div>
-      <h2>Mittags</h2>
-      <p v-if="categoryIds[1]">{{categoryIds[1]}}</p>
-      <p v-else>Nichts</p>
-    </div>
-    <div>
-      <h2>Abends</h2>
-      <p v-if="categoryIds[2]">{{categoryIds[2]}}</p>
-      <p v-else>Nichts</p>
-    </div>
+    <CategoryTimeSlot
+      v-for="item in timeSlots"
+      v-bind:item="item"
+      v-bind:key="item.id"
+      v-on:click="onClick">
+    </CategoryTimeSlot>
   </div>
 </template>
 <script>
+import CategoryTimeSlot from '~/components/CategoryTimeSlot.vue';
+import { categories } from '~/data/categories';
+
 export default {
+  components: {CategoryTimeSlot},
+  methods: {
+    onClick(e) {
+      console.log("click", e);
+    }
+  },
   data() {
     return {
-      categoryIds: []
+      timeSlots: []
     }
   },
   created() {
-    this.categoryIds = this.$route.query?.categoryIds || [];
+    const categoryIds = this.$route.query?.categoryIds || [];
+    const selectedCategories = categoryIds.map(id => categories[id]);
+    const defaultTimeSlots = [
+      {id: 0, name: 'Morgens', category: selectedCategories[0]},
+      {id: 1, name: 'Mittags', category: selectedCategories[1]},
+      {id: 2, name: 'Abends', category: selectedCategories[2]}
+    ];
+    this.timeSlots = defaultTimeSlots;
   }
 }
 </script>
 <style>
-  .header {
-    display: flex;
-  }
+.header {
+  display: flex;
+}
 </style>
