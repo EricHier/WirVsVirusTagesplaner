@@ -1,5 +1,6 @@
 <template>
   <div class="w-full">
+    <img src="/navigation1_1.png">
     <h1 class="w-full my-8 title">Wie ist deine Stimmung heute? </h1>
     <input type="range" min="0" max="4" class="w-full mb-8" v-bind:class="{slidersad: sliderState < 2, slidernormal: sliderState == 2, sliderhappy: sliderState > 2}" v-model="inputValue" id="myRange">
   </div>
@@ -25,6 +26,12 @@
   }
 </script>
 <style>
+
+  img {
+    display: block;
+    margin: auto;
+  }
+
   .slidersad {
     -webkit-appearance: none;
     appearance: none;
