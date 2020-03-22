@@ -30,8 +30,8 @@
   .slider {
     appearance: none;
     outline: none;
-    height: 10px;
-    background: #d3d3d3;
+    height: 5px;
+    background: white;
     border-radius: 5px;
   }
 
@@ -42,6 +42,6 @@
     height: 25px; /* Slider handle height */
     background: #4CAF50; /* Green background */
     cursor: pointer; /* Cursor on hover */
-    border-radius: 5px;
+    border-radius: 50px;
   }
 </style>

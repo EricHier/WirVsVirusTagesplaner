@@ -1,12 +1,12 @@
 <template>
-  <div class="container p-8 background">
+  <div class="container p-8 background" v-bind:style="{'background-image' : 'url(' + background + ')'}">
     <Splashscreen v-if="screenIndex === 0"></Splashscreen>
 
     <CheckinMood ref="checkinmood" v-if="screenIndex === 1" v-on:submit="submitCheckinMood"></CheckinMood>
-    <CheckinPositive v-if="screenIndex === 2" v-on:submit="submitCheckinPositive"></CheckinPositive>
-    <CheckinNegative v-if="screenIndex === 3" v-on:submit="submitCheckinNegative"></CheckinNegative>
+    <CheckinPositive ref="checkinpositive" v-if="screenIndex === 2" v-on:submit="submitCheckinPositive" v-on:show="weiterButton"></CheckinPositive>
+    <CheckinNegative ref=checkinnegative" v-if="screenIndex === 3" v-on:submit="submitCheckinNegative"></CheckinNegative>
 
-    <WeiterButton v-if="screenIndex === 1" class="absolute bottom-0 right-0 m-8" v-on:click="onClick"></WeiterButton>
+    <WeiterButton v-if="screenIndex >= 1" v-bind:back="screenIndex >=2" v-on:back="screenIndex--" v-bind:weiter="weiterButton || screenIndex == 1" class="absolute bottom-0 right-0 my-8" v-on:click="onClick"></WeiterButton>
   </div>
 </template>
 
@@ -25,12 +25,20 @@ export default {
   data() {
     return {
       screenIndex: 0,
+      weiterButton: false,
       checkinMood: {},
       checkinPositive: {},
-      checkinNegative: {}
+      checkinNegative: {},
+      background: "/bg_slider.jpg"
     }
   },
   methods: {
+    onClick()  {
+      if (this.screenIndex === 1)
+        this.$refs.checkinmood.sendResult();
+      else if (this.screenIndex === 2)
+        this.$refs.checkinpositive.sendResult();
+    },
     submitCheckinMood(props) {
       this.checkinMood = props;
       this.screenIndex++;
@@ -38,17 +46,20 @@ export default {
     submitCheckinPositive(props) {
       this.checkinPositive = props;
       this.screenIndex++;
+      this.weiterButton = false;
     },
     submitCheckinNegative(props) {
       this.checkinNegative = props;
       this.screenIndex++;
-    },
-    onClick() {
-      this.$refs.checkinmood.click();
     }
   },
   watch: {
     screenIndex (newVal) {
+      if(newVal >= 2) {
+        this.background = "/bg_checkin.png";
+      } else {
+        this.background = "/bg_slider.jpg";
+      }
       if (newVal >= 4) {
         this.$router.push({
           name: 'planner',
@@ -63,7 +74,7 @@ export default {
 
     setTimeout(() => {
       self.screenIndex = 1
-    }, 1000);
+    }, 3000);
   }
 }
 </script>

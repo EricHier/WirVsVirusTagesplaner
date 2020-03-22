@@ -2,9 +2,8 @@
   <div>
     <h1 class="title my-8">Was lief gut?  </h1>
     <CategoryList
-      v-bind:is-emit-click=true
-      v-on:click="onClick"
-    >
+    v-on:click="onClick"
+    ref="categorylist">
     </CategoryList>
   </div>
 </template>
@@ -15,7 +14,10 @@
     components: {CategoryList},
     methods: {
       onClick(e) {
-        this.$emit("submit", e.id);
+        this.$emit("show");
+      },
+      sendResult() {
+        this.$emit("submit", this.$refs.categorylist.getData());
       }
     }
   }

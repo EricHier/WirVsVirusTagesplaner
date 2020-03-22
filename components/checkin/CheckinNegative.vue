@@ -1,10 +1,7 @@
 <template>
   <div>
     <h1 class="title my-8">Was lief nicht gut?  </h1>
-    <CategoryList
-      v-bind:is-emit-click=true
-      v-on:click="onClick"
-    >
+    <CategoryList>
     </CategoryList>
   </div>
 </template>
