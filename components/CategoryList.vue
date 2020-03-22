@@ -1,15 +1,11 @@
 <template>
   <div>
-    <ul>
-      <CategoryItem
-        v-for="item in list"
-        v-bind:item="item"
-        v-bind:key="item.id"
-        v-on:click="onClick">
-      </CategoryItem>
-    </ul>
-    <WeiterButton v-if="!isEmitClick" v-on:click="submitCategoryList">Los</WeiterButton>
-
+    <CategoryItem
+      v-for="item in listItems"
+      v-bind:item="item"
+      v-bind:key="item.id"
+      v-on:click="onClick">
+    </CategoryItem>
   </div>
 </template>
 <script>
@@ -18,22 +14,29 @@ import WeiterButton from "~/components/WeiterButton.vue";
 import { categories } from '~/data/categories';
 
 export default {
-  props: {
-    isEmitClick: Boolean
-  },
   components: {
-    CategoryItem, WeiterButton
+    CategoryItem
   },
   methods: {
     submitCategoryList(clickEvent) {
-      const filtered = this.list.filter(function(x) { return x.checked; });
+      const filtered = this.listItems.filter(function(x) { return x.checked; });
 
       this.$router.push({
         name: 'plan',
         query: { categoryIds: filtered.map(x => x.id) }
       });
     },
+    getData() {
+      return this.listItems;
+    },
     onClick(e) {
+      let selectedItems =  this.listItems.filter((value) => value.checked);
+      let selected = selectedItems.length;
+      if (selected > 3)
+        e.checked = false;
+
+      e.selectedItems = selectedItems;
+
       this.$emit("click", e);
     }
   },

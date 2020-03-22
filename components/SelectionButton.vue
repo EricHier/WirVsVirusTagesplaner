@@ -1,10 +1,11 @@
 <template>
-  <button v-on:click="sendclick" class="custombutton outline-none">
+  <button v-on:click="sendclick" class="selected outline-none" v-bind:class="{'custombutton' : selected}">
     <slot/>
   </button>
 </template>
 <script>
   export default  {
+    props: ["selected"],
     methods: {
       sendclick() {
         this.$emit("click");
@@ -14,13 +15,26 @@
 </script>
 <style>
   .custombutton {
+    background-color: #FFB115 !important;
+    font-weight: 400 !important;
+    color: white !important;
+    border: 0 !important;
+  }
+
+  .selected {
     width: 260px;
     height: 55px;
-    background-color: #FFB115;
+    background-color: white;
     font-size: 18px;
-    font-weight: 400;
-    color: white;
     border-radius: 8px;
+    border: 2px solid #FFB115;
+    outline: none;
+    font-family: 'Noto Serif', serif;
+    color: #FFB115;
+    font-weight: 600;
+  }
+
+  .custombutton:focus {
     outline: none;
   }
 </style>
