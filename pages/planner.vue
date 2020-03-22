@@ -2,15 +2,16 @@
   <div class="container p-8 pb-0 background" style="background-image: url('/bg_list.jpg')">
     <div style="background-image: url('/Weisse_Flaeche.svg'); padding-bottom: 7rem; " class="-mx-8 mt-20">
 
-      <h1 class="title my-8 mt-12">Was hast du morgen vor? </h1>
+      <h1 class="title mt-12">Was hast du morgen vor?</h1>
+      <p class="my-4 text-center nunito">Bitte drei auswählen:</p>
       <CategoryList
         ref="categorylist"
-        v-on:notthree="notThreee">
+        v-on:notthree="notThree">
       </CategoryList>
     </div>
 
-    <WeiterButton v-bind:back="false" v-bind:seethrough="true" v-bind:weiter="weiterButton"
-                  v-on:click="onClick"></WeiterButton>
+    <WeiterButton v-bind:back="false" v-bind:seethrough="true" v-bind:weiter="weiterButton" v-on:click="onClick">
+    </WeiterButton>
   </div>
 </template>
 <script>
@@ -31,7 +32,7 @@
       onClick() {
         this.$refs.categorylist.submitCategoryList();
       },
-      notThreee(e) {
+      notThree(e) {
         this.weiterButton = e;
       }
     },
