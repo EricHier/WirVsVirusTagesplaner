@@ -1,15 +1,25 @@
 <template>
   <div>
     <h1>Plan Details</h1>
-    <p>{{categoryDetails}}</p>
+    <h2>{{categoryDetails.name}}</h2>
+    <CategoryActivity
+      v-for="item in categoryDetails.activities"
+      v-bind:item="item"
+      v-bind:key="item.category_id"
+      v-on:click="onClick">
+    </CategoryActivity>
   </div>
 </template>
 <script>
+import CategoryActivity from '~/components/CategoryActivity.vue';
 import { category_details } from '~/data/category_details';
 
 export default {
-  components: {},
+  components: {CategoryActivity},
   methods: {
+    onClick(activity) {
+      console.log('activity', activity);
+    }
   },
   data() {
     return {
