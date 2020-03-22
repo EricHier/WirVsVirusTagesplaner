@@ -2,7 +2,7 @@
   <div>
     <div class="fixed top-0 left-0 w-screen h-screen" style="background-image: url('/bg_plan.jpg'); z-index: -2"></div>
 
-    <div style="background-image: url('/Weisse_Flaeche.svg'); padding-bottom: 7rem;" class="p-8 mt-56">
+    <div style="background-image: url('/Weisse_Flaeche.svg'); padding-bottom: 7rem;" class="cover p-8 mt-56">
       <h1 class="title mt-12 mb-2 text-center">{{title}}</h1>
       <h2 class="text-center">{{question}}</h2>
 
@@ -16,18 +16,23 @@
           v-on:click="onClick">
         </CategoryActivity>
       </div>
+      <WeiterButton v-bind:weiter="false" v-bind:disabled="false" v-on:back="back" v-bind:back="true"></WeiterButton>
     </div>
   </div>
 </template>
 <script>
 import CategoryActivity from '~/components/CategoryActivity.vue';
 import { category_details } from '~/data/category_details';
+import WeiterButton from "../components/WeiterButton";
 
 export default {
-  components: {CategoryActivity},
+  components: {WeiterButton, CategoryActivity, WeiterButton},
   methods: {
     onClick(activity) {
       console.log('activity', activity);
+    },
+    back() {
+      window.history.back();
     }
   },
   data() {
