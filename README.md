@@ -2,7 +2,7 @@
 Im Rahmen des Hackathons #WirVsVirusHack haben wir die App Days@Home entwickelt, die hilft, die Tage zu Hause produktiv und angenehm zu gestalten.
 
 ## Zu Beachten
-Die App funktioniert, auf Grund des Zeitlimits zurzeit nur in Google Chrome und wurde auf das IPhone X optimiert. (Inspect -> Mobile)
+Die App funktioniert, auf Grund des Zeitlimits, zurzeit nur in Google Chrome und wurde auf das IPhone X optimiert. (Inspect -> Mobile)
 
 ## Build Setup
 
