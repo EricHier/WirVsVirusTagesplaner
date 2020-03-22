@@ -28,7 +28,7 @@ export default {
       checkinMood: 2,
       checkinPositive: [],
       checkinNegative: [],
-      background: "/bg_slider.jpg"
+      background: "/bg_startscreen.jpg"
     }
   },
   methods: {
