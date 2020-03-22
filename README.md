@@ -1,10 +1,21 @@
 # Days@Home
-Im Rahmen des Hackathons #WirVsVirusHack haben wir die App Days@Home entwickelt, die hilft, die Tage zu Hause produktiv und angenehm zu gestalten.
+Im Rahmen des **#WirVsVirusHack Hackathons des Bundesregierung** haben wir die App Days@Home entwickelt, die hilft, die Tage zu Hause produktiv und angenehm zu gestalten. 
 
-## Zu Beachten
-Die App funktioniert, auf Grund des Zeitlimits, zurzeit nur in Google Chrome und wurde auf das IPhone X optimiert. (Inspect -> Mobile)
+### Der Hackathlon
+
+Das Projekt entstand im Rahmen der Corona-Krise der Jahr 2020 entstanden. Weitere Informationen zum Hackathlon findet ihr [hier](https://www.bundesregierung.de/breg-de/themen/coronavirus/wir-vs-virus-1731968). Zu diesem Zeithab war das der weltweit größte Hackathlon der Welt mit über 42.000 angemeldeten Teilnehmern. 
+
+### Weitere Informationen
+
+Unsere gesammte Einreichung inklusive Vorstellungsvideo kann auf der dazugehörigen Seite auf *DevPost* eingesehen werden. Den Link findet ihr [hier](https://devpost.com/software/plan-your-day-at-home).
+
+## !! Zu Beachten !!
+
+Die aktuelle Version der App funktioniert, auf Grund des Zeitlimits, zurzeit nur in Google Chrome und wurde auf das IPhone X optimiert. Auf */show* gibt es dafür ein Iframe, welches die App in der richtigen Größe darstellt. Alternativ kann können die Entwickler-Tools benutzt werden, um die Webseite in der richtigen Auflösung zu rendern. 
 
 ## Build Setup
+
+Das Projekt wurde mit `Vue.js` und `Nuxt.js` umgesetzt, als Package Manager wurde `NPN` genutzt. 
 
 ```bash
 # install dependencies
@@ -17,6 +28,6 @@ $ npm run dev
 $ npm run build
 $ npm run start
 
-# generate static project
+# generate static project to deploy to firebase hosting for example
 $ npm run generate
 ```
