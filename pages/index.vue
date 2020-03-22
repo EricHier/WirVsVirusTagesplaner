@@ -28,7 +28,7 @@ export default {
       checkinMood: 2,
       checkinPositive: [],
       checkinNegative: [],
-      background: "/bg_startscreen.jpg"
+      background: "/bg_startscreen.png"
     }
   },
   methods: {
@@ -40,15 +40,11 @@ export default {
     },
     newPositiveData (data) {
       this.checkinPositive = data;
-
-      if (data.length >= 1)
-        this.weiterButton = true;
+      this.weiterButton = (data.length >= 1);
     },
     newNegativeData (data) {
       this.checkinNegative = data;
-
-      if (data.length >= 1)
-        this.weiterButton = true;
+      this.weiterButton = (data.length >= 1);
     }
   },
   watch: {
@@ -62,7 +58,7 @@ export default {
       if (newVal >= 4) {
         this.$router.push({
           name: 'planner',
-          query: { categoryIds: [this.checkinPositive, this.checkinNegative] }
+          query: { categoryIds: this.checkinPositive.concat(this.checkinNegative.filter((item) => this.checkinPositive.indexOf(item) < 0)) }
         });
       }
     }

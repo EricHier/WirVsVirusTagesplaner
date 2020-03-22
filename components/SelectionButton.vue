@@ -29,7 +29,7 @@
     border-radius: 8px;
     border: 2px solid #FFB115;
     outline: none;
-    font-family: 'Noto Serif', serif;
+    font-family: 'Noto Sans', serif;
     color: #FFB115;
     font-weight: 600;
   }
