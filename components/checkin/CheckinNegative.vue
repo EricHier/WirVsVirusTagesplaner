@@ -1,5 +1,5 @@
 <template>
-  <div style="background-image: url('/Weisse_Flaeche.svg')" class="w-screen h-screen mt-20">
+  <div style="background-image: url('/Weisse_Flaeche.svg'); " class="w-screen h-screen mt-20">
     <h1 class="title my-8 mt-12">Worauf möchtest du<br> morgen mehr achten? </h1>
     <CategoryList
       v-on:click="onClick"

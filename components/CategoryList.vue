@@ -37,10 +37,15 @@ export default {
     onClick(e) {
       let selectedItems =  this.listItems.filter((value) => value.checked);
       let selected = selectedItems.length;
-      if (selected > 3)
-        e.checked = false;
 
-      e.selectedItems = selectedItems;
+      if (selected > 3) {
+        e.checked = false;
+        this.$emit("notthree", selected === 4);
+      } else
+        this.$emit("notthree", selected === 3);
+
+
+        e.selectedItems = selectedItems;
       this.$emit("click", e);
     }
   },
