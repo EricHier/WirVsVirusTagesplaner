@@ -16,8 +16,11 @@ import { categories } from '~/data/categories';
 export default {
   components: {CategoryTimeSlot},
   methods: {
-    onClick(e) {
-      console.log("click", e);
+    onClick(category) {
+      this.$router.push({
+        name: 'plan_item',
+        query: { categoryId: category.id }
+      });
     }
   },
   data() {
