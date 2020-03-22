@@ -1,13 +1,22 @@
 <template>
   <div>
-    <h1>Plan Details</h1>
-    <h2>{{categoryDetails.name}}</h2>
-    <CategoryActivity
-      v-for="item in categoryDetails.activities"
-      v-bind:item="item"
-      v-bind:key="item.category_id"
-      v-on:click="onClick">
-    </CategoryActivity>
+    <div class="fixed top-0 left-0 w-screen h-screen" style="background-image: url('/bg_plan.jpg'); z-index: -2"></div>
+
+    <div style="background-image: url('/Weisse_Flaeche.svg'); padding-bottom: 7rem;" class="p-8 mt-56">
+      <h1 class="title mt-12 mb-2 text-center">{{title}}</h1>
+      <h2 class="text-center">{{question}}</h2>
+
+      <p class="mt-4 border-b-2 pl-8 mb-4 -ml-8 category-name nunito border-orange"> {{categoryDetails.name}}</p>
+
+      <div class="bg-white w-screen -ml-8">
+        <CategoryActivity
+          v-for="item in categoryDetails.activities"
+          v-bind:item="item"
+          v-bind:key="item.category_id"
+          v-on:click="onClick">
+        </CategoryActivity>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -23,11 +32,15 @@ export default {
   },
   data() {
     return {
-      categoryDetails: {}
+      categoryDetails: {},
+      title: "",
+      question: ""
     }
   },
   created() {
     const categoryId = this.$route.query.categoryId;
+    this.title = this.$route.query.title;
+    this.question = this.$route.query.question;
 
     for(const details of category_details) {
       if(details.category_id == categoryId) {
@@ -37,3 +50,11 @@ export default {
   }
 }
 </script>
+<style>
+  .category-name {
+    width: 100vw;
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFB115;
+  }
+</style>

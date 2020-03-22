@@ -1,7 +1,7 @@
 <template>
   <div class="container absolute top-0">
     <h1>Hallo.</h1>
-    <p>Schön, dass du da bist!</p>
+    <p class="nunito">Schön, dass du da bist!</p>
   </div>
 </template>
 <style>

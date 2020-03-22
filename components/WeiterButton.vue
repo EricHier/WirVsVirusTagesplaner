@@ -1,9 +1,9 @@
 <template>
   <div class="w-full flex justify-end px-8 fixed bottom-0 right-0 py-8" v-bind:class="{'justify-between' : back, 'background-seethrough' : seethrough}" >
-    <button v-on:click="onClickBack" v-if="back" class="px-4 py-2 larger background-ouryellow text-white outline-none">
+    <button v-on:click="onClickBack" v-if="back" class="custombutton nunito px-4 py-2 larger background-ouryellow text-white outline-none">
       zurück
     </button>
-    <button v-on:click="onClick" v-if="weiter" class="px-4 py-2 larger background-ouryellow text-white outline-none">
+    <button v-on:click="onClick" v-if="weiter" class="nunito  px-4 py-2 larger background-ouryellow text-white outline-none">
       weiter
     </button>
   </div>
@@ -28,7 +28,7 @@
     }
   }
 </script>
-<style>
+<style scoped>
   .larger {
     font-size: 20px;
   }
@@ -42,5 +42,12 @@
 
   .background-seethrough {
     background-color: #ffffffbf;
+  }
+
+  .custombutton {
+    background-color: white !important;
+    font-weight: 400 !important;
+    color: #F57840 !important;
+    border: 2px solid #F57840 !important;
   }
 </style>

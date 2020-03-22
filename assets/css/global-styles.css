@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
 
 * {
   font-family: 'Noto Serif', serif;
@@ -21,12 +22,20 @@
   font-size: 14px;
 }
 
+.border-orange {
+  border-color: #FFB115;
+}
+
 .background {
   background-image:
     linear-gradient(
       to bottom,
       #f9fefee9, #caf5f5e9
     );
+}
+
+.nunito {
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .container {
