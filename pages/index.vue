@@ -4,7 +4,7 @@
 
     <CheckinMood ref="checkinmood" v-if="screenIndex === 1" v-on:submit="submitCheckinMood"></CheckinMood>
     <CheckinPositive ref="checkinpositive" v-if="screenIndex === 2" v-on:submit="submitCheckinPositive" v-on:show="weiterButton"></CheckinPositive>
-    <CheckinNegative ref=checkinnegative" v-if="screenIndex === 3" v-on:submit="submitCheckinNegative"></CheckinNegative>
+    <CheckinNegative ref="checkinnegative" v-if="screenIndex === 3" v-on:submit="submitCheckinNegative"></CheckinNegative>
 
     <WeiterButton v-if="screenIndex >= 1" v-bind:back="screenIndex >=2" v-on:back="screenIndex--" v-bind:weiter="weiterButton || screenIndex == 1" class="absolute bottom-0 right-0 my-8" v-on:click="onClick"></WeiterButton>
   </div>
@@ -29,7 +29,7 @@ export default {
       checkinMood: {},
       checkinPositive: {},
       checkinNegative: {},
-      background: "/bg_slider.jpg"
+      background: "/bg_startscreen.jpg"
     }
   },
   methods: {
