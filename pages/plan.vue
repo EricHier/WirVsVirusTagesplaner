@@ -1,6 +1,7 @@
-  <template>
-  <div class="container p-8 background">
+<template>
+  <div class="container p-8 pb-0 background" style="background-image: url('/bg_plan.jpg')">
     <h1 class="title my-8">Dein Plan für heute</h1>
+    <h2 class="mb-6">Was hast du heute vor?</h2>
     <CategoryTimeSlot
       v-for="item in timeSlots"
       v-bind:item="item"
