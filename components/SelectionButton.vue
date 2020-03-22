@@ -1,5 +1,5 @@
 <template>
-  <button v-on:click="sendclick" class="selected outline-none" v-bind:class="{'custombutton' : selected}">
+  <button v-on:click="sendclick" class="selected outline-none nunito" v-bind:class="{'custombutton' : selected}">
     <slot/>
   </button>
 </template>
