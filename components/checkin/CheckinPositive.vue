@@ -16,11 +16,7 @@
     props: ["data"],
     methods: {
       onClick(e) {
-        console.log(e);
-        this.$emit("show");
-      },
-      sendResult() {
-        this.$emit("submit", this.$refs.categorylist.getData());
+        this.$emit("data", this.$refs.categorylist.getData());
       }
     },
     mounted() {

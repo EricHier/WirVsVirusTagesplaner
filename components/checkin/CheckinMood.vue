@@ -12,12 +12,9 @@
   export default {
     components: {WeiterButton, ButtonDesign},
     props: ["inputValue"],
-    methods: {
-      sendResult() {
-        this.$emit("submit", parseInt(this.inputValue));
-      },
-      click() {
-        this.sendResult();
+    watch: {
+      inputValue: function (val) {
+        this.$emit("data", val);
       }
     }
   }

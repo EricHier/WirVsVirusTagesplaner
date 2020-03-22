@@ -10,7 +10,6 @@
 </template>
 <script>
 import CategoryItem from '~/components/CategoryItem.vue';
-import WeiterButton from "~/components/WeiterButton.vue";
 import { categories } from '~/data/categories';
 
 export default {
