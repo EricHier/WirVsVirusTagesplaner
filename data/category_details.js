@@ -1,7 +1,7 @@
 export const category_details = [
   {
     "name": "Kontakt zu Anderen",
-    "category_id": 1,
+    "category_id": 0,
     "activities": [
       {
         "name": "Einen Freund Anrufen",
@@ -27,7 +27,7 @@ export const category_details = [
   },
   {
     "name": "Bewegung",
-    "category_id": 2,
+    "category_id": 1,
     "activities": [
       {
         "name": "Yoga",
@@ -70,5 +70,10 @@ export const category_details = [
         "link": "https://www.youtube.com/watch?v=PKPQ0M5RRto",
       },
     ]
+  },
+  {
+    "name": "Ernährung",
+    "category_id": 2,
+    "activities": []
   }
 ];
