@@ -50,7 +50,10 @@ export default {
   watch: {
     screenIndex (newVal) {
       if (newVal >= 4) {
-        this.$route.push("/planner");
+        this.$router.push({
+          name: 'planner',
+          query: { categoryIds: [this.checkinPositive, this.checkinNegative] }
+        });
       }
     }
     // 375 - 812
@@ -64,11 +67,3 @@ export default {
   }
 }
 </script>
-<style>
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-</style>

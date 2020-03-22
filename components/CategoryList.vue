@@ -1,23 +1,17 @@
 <template>
   <div>
-    <ul>
-      <CategoryItem
-        v-for="item in list"
-        v-bind:item="item"
-        v-bind:key="item.id"
-        v-on:click="onClick">
-      </CategoryItem>
-    </ul>
-    <button v-if="!isEmitClick" v-on:click="submitCategoryList">Los</button>
+    <CategoryItem
+      v-for="item in list"
+      v-bind:item="item"
+      v-bind:key="item.id"
+      v-on:click="onClick">
+    </CategoryItem>
   </div>
 </template>
 <script>
 import CategoryItem from '~/components/CategoryItem.vue';
 
 export default {
-  props: {
-    isEmitClick: Boolean
-  },
   components: {
     CategoryItem
   },

@@ -3,7 +3,7 @@
     <h1 class="title my-8">Was lief gut?  </h1>
     <CategoryList
       v-bind:is-emit-click=true
-      v-on:click="test"
+      v-on:click="onClick"
     >
     </CategoryList>
   </div>
@@ -14,8 +14,8 @@
   export default {
     components: {CategoryList},
     methods: {
-      test(e) {
-        console.log(e);
+      onClick(e) {
+        this.$emit("submit", e.id);
       }
     }
   }

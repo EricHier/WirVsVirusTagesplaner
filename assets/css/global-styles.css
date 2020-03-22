@@ -28,3 +28,10 @@
       #f9fefee9, #caf5f5e9
     );
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
