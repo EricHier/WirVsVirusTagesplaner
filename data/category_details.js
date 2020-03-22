@@ -72,8 +72,28 @@ export const category_details = [
     ]
   },
   {
-    "name": "Ernährung",
+    "name": "Essen und Trinken",
     "category_id": 2,
-    "activities": []
+    "activities": [
+      {
+        "name": "KptnCook",
+        "link": "https://www.kptncook.com/"
+      },
+      {
+        "name": "Chefkoch",
+        "link": "https://www.chefkoch.de/"
+      },
+      {
+        "name": "Backen",
+        "link": "https://www.youtube.com/channel/UCPNqPbXJHMvrH3NwRKKR5IQ"
+      },
+      {
+        "name": "Tee / Kaffee trinken",
+      },
+      {
+        "name": "Smoothie machen",
+        "link": "https://www.youtube.com/watch?v=hvLxjXURkM4"
+      }
+    ]
   }
 ];
