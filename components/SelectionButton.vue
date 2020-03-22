@@ -31,7 +31,7 @@
     outline: none;
     font-family: 'Noto Sans', serif;
     color: #FFB115;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .custombutton:focus {
