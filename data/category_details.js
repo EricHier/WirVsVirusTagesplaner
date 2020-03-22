@@ -228,11 +228,51 @@ export const category_details = [
       {"name": "Serien schauen",},
       {"name": "Filme schauen",},
       {"name": "Wellness daheim",},
-      {"name": "Wellness daheim",},
       {"name": "in die Badewanne legen",},
       {"name": "heiß duschen",},
       {"name": "Kerzen anmachen",},
       {"name": "Geschichte anhören",},
+    ]
+  },
+  {
+    "name": "Produktiv sein",
+    "category_id": 7,
+    "activities": [
+      {
+        "name": "Arbeiten",
+      },
+      {
+        "name": "Sprachen lernen",
+        "link": "https://duolingo.com/",
+        //        (APPs: babbel/ duolingo)
+      },
+      {
+        "name": "Persönliche Weiterentwicklung: Gedankentanken",
+        "link": "https://www.youtube.com/channel/UC2AnkjPy95aL0X-q9MPm2-Q",
+      },
+      {
+        "name": "Dinge Erklärt- Kurzgesagt",
+        "link": "https://www.youtube.com/user/KurzgesagtDE",
+      },
+      {
+        "name": "Business&Mindset: 5 Ideen ",
+        "link": "https://www.youtube.com/channel/UCXTTZIvh1UAlf0kv6XHvOtg",
+      }, {
+        "name": "Vorträge",
+        "link": "https://www.ted.com/",
+      },
+      {
+        "name": "Gehirnjogging",
+        "link": "https://sp.neuronation.com/de/",
+      },
+      {"name": "Pläne schmieden",},
+      {"name": "Urlaub planen",},
+      {"name": "Blumen umtopfen",},
+      {"name": "Blumen gießen",},
+      {"name": "Aufräumen",},
+      {"name": "Umräumen",},
+      {"name": "Dekorieren",},
+      {"name": "Ausmisten/ Dinge bei Ebay online stellen", "link": "https://www.ebay.de/"},
     ]
   },
 ];
