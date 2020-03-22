@@ -1,6 +1,6 @@
 <template>
   <div class="container absolute top-0">
-    <div class="title">Hallo.</div>
+    <h1>Hallo.</h1>
     <p>Schön, dass du da bist!</p>
   </div>
 </template>
@@ -12,5 +12,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+  h1 {
+    font-size: 58px;
   }
 </style>
