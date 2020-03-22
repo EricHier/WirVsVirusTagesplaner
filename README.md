@@ -3,9 +3,9 @@ Im Rahmen des **#WirVsVirusHack Hackathons des Bundesregierung** haben wir die A
 
 Das Ziel ist es, abhängig vonm aktuellen Gefühlszustand und den gewählten Interessen einen Tag zu planen und die Aktivitäten durch wertvolle Tips anzureichern. Nachdem der Tag gestaltet wurde, werden beispielsweise Enspannungstechniken, Fortbildungstipps oder Rezepte vorgeschlagen. 
 
-### Der Hackathlon
+### Der Hackathon
 
-Das Projekt entstand im Rahmen der Corona-Krise der Jahr 2020 entstanden. Weitere Informationen zum Hackathlon findet ihr [hier](https://www.bundesregierung.de/breg-de/themen/coronavirus/wir-vs-virus-1731968). Zu diesem Zeithab war das der weltweit größte Hackathlon der Welt mit über 42.000 angemeldeten Teilnehmern. 
+Das Projekt entstand im Rahmen der Corona-Krise der Jahr 2020 entstanden. Weitere Informationen zum Hackathon findet ihr [hier](https://www.bundesregierung.de/breg-de/themen/coronavirus/wir-vs-virus-1731968). Zu diesem Zeithab war das der weltweit größte Hackathon der Welt mit über 42.000 angemeldeten Teilnehmern. 
 
 ### Weitere Informationen
 
