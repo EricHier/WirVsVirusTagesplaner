@@ -16,7 +16,7 @@
           v-on:click="onClick">
         </CategoryActivity>
       </div>
-      <WeiterButton v-bind:weiter="false" v-bind:disabled="false" v-on:back="back" v-bind:back="true"></WeiterButton>
+      <WeiterButton v-bind:weiter="false" v-bind:disabled="false" v-on:back="back" v-bind:seethrough="true" v-bind:back="true"></WeiterButton>
     </div>
   </div>
 </template>
