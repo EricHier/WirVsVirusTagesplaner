@@ -1,0 +1,65 @@
+{
+  "category_details": [
+    {
+      "name": "Kontakt zu Anderen",
+      "category_id": 1,
+      "activities": [
+        {
+          "name": "Einen Freund Anrufen",
+          "image": "images/call.png",
+          "text": "Ruf doch mal wieder einen alten Freund an."
+        },
+        {
+          "name": "Mit der Familie Telefonieren",
+          "image": "images/group_call.png",
+          "text": "Deine Verwandte freuen sich, von dir zu hören."
+        },
+        {
+          "name": "Einen Brief schreiben",
+          "image": "images/letter.png",
+          "text": "Warum nicht mal wieder analog?"
+        },
+        {
+          "name": "Via Skype gemeinsam Essen",
+          "image": "images/skype.png",
+          "textg": "Gemeinsames Essen ist auch digital möglich."
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Soziale Kontakte"
+    },
+    {
+      "id": 2,
+      "name": "Bewegung"
+    },
+    {
+      "id": 3,
+      "name": "Ernährung"
+    },
+    {
+      "id": 4,
+      "name": "Schlaf"
+    },
+    {
+      "id": 5,
+      "name": "Positiver Fokus"
+    },
+    {
+      "id": 6,
+      "name": "Kreatives"
+    },
+    {
+      "id": 7,
+      "name": "Entspannung"
+    },
+    {
+      "id": 8,
+      "name": "Produktiv sein"
+    }
+  ]
+}
+
