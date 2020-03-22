@@ -58,7 +58,7 @@ export default {
       if (newVal >= 4) {
         this.$router.push({
           name: 'planner',
-          query: { categoryIds: this.checkinPositive.concat(this.checkinNegative.filter((item) => this.checkinPositive.indexOf(item) < 0)) }
+          query: { categoryIds: /*this.checkinPositive.concat(this.checkinNegative.filter((item) => this.checkinPositive.indexOf(item) < 0))*/ this.checkinNegative }
         });
       }
     }

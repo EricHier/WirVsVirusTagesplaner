@@ -1,6 +1,6 @@
 <template>
   <div class="container p-8 pb-0 background" style="background-image: url('/bg_list.jpg')">
-    <div style="background-image: url('/Weisse_Flaeche.svg'); padding-bottom: 7rem; " class="-mx-8 mt-20">
+    <div style="background-image: url('/Weisse_Flaeche.svg'); padding-bottom: 7rem; " class="-mx-8 cover mt-20">
 
       <h1 class="title mt-12">Was hast du morgen vor?</h1>
       <p class="my-4 text-center nunito">Bitte drei auswählen:</p>

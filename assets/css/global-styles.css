@@ -49,3 +49,7 @@
 body {
   overflow-x:hidden;
 }
+
+.cover {
+  background-size: cover;
+}

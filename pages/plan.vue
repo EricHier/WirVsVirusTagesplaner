@@ -2,9 +2,9 @@
   <div>
     <div class="fixed top-0 left-0 w-screen h-screen" style="background-image: url('/bg_plan.jpg'); z-index: -2"></div>
 
-    <div style="background-image: url('/Weisse_Flaeche.svg'); padding-bottom: 7rem;" class="p-8 mt-56">
+    <div style="background-image: url('/Weisse_Flaeche.svg'); padding-bottom: 7rem;" class="p-8 mt-56 cover">
       <h1 class="title mt-12 mb-2 text-center">Dein Plan für heute</h1>
-      <h2 class="text-center">Was hast du heute vor?</h2>
+      <h2 class="text-center flex-grow w-full">Was hast du heute vor?</h2>
 
       <CategoryTimeSlot
         v-for="item in timeSlots"
