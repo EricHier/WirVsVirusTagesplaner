@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex justify-end px-8" v-bind:class="{'justify-between' : back}">
+  <div class="w-full flex justify-end px-8 fixed bottom-0 right-0 py-8" v-bind:class="{'justify-between' : back, 'background-seethrough' : seethrough}" >
     <button v-on:click="onClickBack" v-if="back" class="px-4 py-2 larger background-ouryellow text-white outline-none">
       zurück
     </button>
@@ -16,6 +16,7 @@
         type: Boolean,
         default: true
       },
+      seethrough: Boolean
     },
     methods: {
       onClickBack() {
@@ -37,5 +38,9 @@
     height: 55px;
     width: 105px;
     border-radius: 8px;
+  }
+
+  .background-seethrough {
+    background-color: #ffffffbf;
   }
 </style>
